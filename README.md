@@ -1,4 +1,4 @@
-# WEB103 Project 1 - *Elevate - Guide to Starting Your Business*
+# WEB103 Project 1 - *Guide to Starting Your Business*
 
 Submitted by: **Kim Pham**
 
