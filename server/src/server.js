@@ -10,7 +10,7 @@ app.use('/scripts', express.static('./public/scripts'))
 app.use('/tips', tipsRouter)  
 
 app.get('/', (req, res) => {
-  res.status(200).send('<h1 style="text-align: center; margin-top: 50px;">UnEarthed API</h1>')
+  res.status(200).send('<h1 style="text-align: center; margin-top: 50px;">Startup business guides API</h1>')
 })
 
 const PORT = process.env.PORT || 3001

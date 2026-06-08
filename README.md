@@ -1,2 +1,2 @@
-# unearthed
-What should you get for someone who has everything (can't relate)? What about someone who hates stuff? Unearthed has your answer: it's a crowdsourced repo of great gift ideas for different kinds of people. Browse gifts by intended audience, price point, or category, or upload your own gift ideas! 
+# Elevate
+No matter what stage you are at opening up a business, we have a tutorial for you! Looking to brainstorm business ideas and find your niche? We can guide you in the right direction! Finding the right partner? Growing your team? Talking to suppliers? We have a short guide for each one of those. Our guides are sorted into different categories (including business models, product development, sales, market research, and funding) so you can browse or filter to personalize your experience.
