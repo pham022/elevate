@@ -1,5 +1,5 @@
 import express from 'express'
-import giftsRouter from './routes/gifts.js'
+import tipsRouter from './routes/tips.js'
 
 const app = express()
 
@@ -17,5 +17,5 @@ app.listen(PORT, () => {
   console.log(`🚀 Server listening on http://localhost:${PORT}`)
 })
 
-app.use('/gifts', giftsRouter)
+app.use('/tips', tipsRouter)
 

@@ -1,13 +1,13 @@
-const renderGifts = async () => {
+const renderTips = async () => {
     
-    const response = await fetch('/gifts')
+    const response = await fetch('/tips')
     const data = await response.json()
 
     const mainContent = document.getElementById('main-content')
 
     if (data) {
 
-        data.map(gift => {
+        data.map(tip => {
             const card = document.createElement('div')
             card.classList.add('card')
 
@@ -17,24 +17,24 @@ const renderGifts = async () => {
             const bottomContainer = document.createElement('div')
             bottomContainer.classList.add('bottom-container')
 
-            topContainer.style.backgroundImage = `url(${gift.image})`
+            topContainer.style.backgroundImage = `url(${tip.image})`
 
-            const name = document.createElement('h3')
-            name.textContent = gift.name
-            bottomContainer.appendChild(name)
+            const title = document.createElement('h3')
+            title.textContent = tip.title
+            bottomContainer.appendChild(title)
 
-            const pricePoint = document.createElement('p')
-            pricePoint.textContent = 'Price: ' + gift.pricePoint
-            bottomContainer.appendChild(pricePoint)
+            const category = document.createElement('p')
+            category.textContent = 'Category: ' + tip.category
+            bottomContainer.appendChild(category)
 
-            const audience = document.createElement('p')
-            audience.textContent = 'Great For: ' + gift.audience
-            bottomContainer.appendChild(audience)
+            // const audience = document.createElement('p')
+            // audience.textContent = 'Great For: ' + tip.audience
+            // bottomContainer.appendChild(audience)
 
             const link = document.createElement('a')
             link.textContent = 'Read More >'
             link.setAttribute('role', 'button')
-            link.href = `/gifts/${gift.id}`
+            link.href = `/tips/${tip.id}`
             bottomContainer.appendChild(link)
 
             card.appendChild(topContainer)
@@ -44,16 +44,15 @@ const renderGifts = async () => {
     }
     else {
         const message = document.createElement('h2')
-        message.textContent = 'No Gifts Available 😞'
+        message.textContent = 'No Data Available 😞'
         mainContent.appendChild(message)
     }
 }
 
-// Step 10: replace renderGifts() call with 404 redirect logic
 const requestedUrl = window.location.href.split('/').pop()
 
 if (requestedUrl) {
     window.location.href = '../404.html'
 } else {
-    renderGifts()
+    renderTips()
 }
