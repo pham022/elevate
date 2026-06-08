@@ -49,4 +49,11 @@ const renderGifts = async () => {
     }
 }
 
-renderGifts()
+// Step 10: replace renderGifts() call with 404 redirect logic
+const requestedUrl = window.location.href.split('/').pop()
+
+if (requestedUrl) {
+    window.location.href = '../404.html'
+} else {
+    renderGifts()
+}
